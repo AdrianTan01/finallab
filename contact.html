@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="flex">
+        <div class="flex">
+            <div><img src="img/Logo.jpg" width="50px" alt="logo"></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cms.html">Web Development</a>
+                <a href="#">App Development</a>
+            </nav>
+        </div>
+        <nav>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="mobile_menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <div class="container_contact flex">
+    </div>
+
+    <div class="cms_info">
+        <h1>Contact Us</h1>
+        <h3>Tel:</h3>
+          <div>
+            <a href="tel:+6012-4748266">+6012-4748266</a>
+          </div>
+          <h3>Email:</h3>
+          <div>
+            <a href="tanadrianapps@gmail.com">tanadrianapps@gmail.com</a>
+          </div>
+        <p>Whether your company is contemplating launching a new website, or has already decided to create a mobile app, Uno will propel your business further by partnering with you to create your next innovation.</p>
+        <p>Fill up the form below and let’s discuss your online and web development as well as brand consultancy needs. We offer free quotations for our clients, so sign up now, and let us go further, together!</p>
+
+        <div class="contact">
+            <h2>Book a Free Consultation NOW!!!</h2>
+            <form>
+                <div id="label-name">
+                  <label>Name</label>
+                  <input name="firstname" id="firstname" placeholder="John Doe" />
+                </div>
+                <div id="label-email">
+                  <label>Email</label>
+                  <input name="lastname" id="lastname" placeholder="example@gmail.com" />
+                </div>
+                <div id="label-phone">
+                    <label>Phone</label>
+                    <input name="lastname" id="lastname" placeholder="+6012-3456789" />
+                  </div>
+    
+                <div id="label-message">
+                  <label>Write your message here:</label>
+                  <textarea
+                    placeholder="Write message here"
+                    id="message"
+                    name="message"
+                  ></textarea>
+                </div>
+                <button type="submit" id="submit">Send</button>
+              </form>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.6300910366135!2d-122.32001348414681!3d47.613881995467814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906acc316efa51%3A0x47f9aaa1a966f140!2s1101%20E%20Pike%20St%2C%20Seattle%2C%20WA%2098122!5e0!3m2!1sen!2sus!4v1629682211977!5m2!1sen!2sus"
+            width="1400"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+      ></iframe>
+
+
+    </div>
+    <script>
+        document.querySelector("#submit").addEventListener("click", function (e) {
+            e.preventDefault();
+            let name = document.querySelector("#name");
+            validate(name);
+
+            let email = document.querySelector("#email");
+            validate(email);
+
+            let message = document.querySelector("#message");
+            validate(message);
+            });
+
+        function validate(field) {
+            let fieldName = field.name;
+            if (field.value.length < 2) {
+                document.querySelector("#label-" + fieldName).classList.add("error");
+                }
+            }
+
+    </script>
+  
+
+    <footer>
+        © Copyright by Tan App Studio, 2021 
+    </footer>
+</body>
+</html>
